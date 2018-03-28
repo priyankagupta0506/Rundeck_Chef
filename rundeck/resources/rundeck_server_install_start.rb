@@ -10,7 +10,6 @@ action :create do
         yes Y y | sudo apt-get -f install
         echo "curl install!!"
         yes Y y | sudo apt-get install curl
-        sudo dpkg --configure -a | echo "for ubuntu 16"
         echo "start java install!!"
         yes Y y | sudo apt-get install python-software-properties
         yes Y y | sudo add-apt-repository ppa:webupd8team/java
