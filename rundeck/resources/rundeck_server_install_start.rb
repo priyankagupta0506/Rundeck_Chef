@@ -27,7 +27,8 @@ action :create do
         echo "install rundeck!!"
         dpkg -i rundeck_2.10.8-1-GA_all.deb
         echo "start rundeck !!"
-        service rundeckd status && service rundeckd start
+        service rundeckd status
+        sudo netstat -antlp | grep 4440
         echo "check UI!!"
       EOH
     end
