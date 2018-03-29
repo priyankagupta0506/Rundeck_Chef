@@ -29,7 +29,6 @@ action :create do
         echo "start rundeck !!"
         service rundeckd status && service rundeckd start
         echo "check UI!!"
-        curl -I http://localhost:4440
       EOH
     end
 end
@@ -38,7 +37,6 @@ action :start do
       code <<-EOH
         service rundeckd status 
         service rundeckd start && service rundeckd status
-        curl -I http://localhost:4440
       EOH
     end
     #notifies :start, "rundeck_server[rundeckd]", :immediately
